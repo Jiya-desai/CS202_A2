@@ -1,0 +1,9 @@
+Test Configuration: pytest_n1_dist_load_parallel_1
+Command: pytest -n 1 --dist load --parallel-threads 1
+
+Run 1: Time = 5.99s, Failures = 0
+Run 2: Time = 5.51s, Failures = 0
+Run 3: Time = 5.94s, Failures = 0
+
+Average Execution Time: 5.81s
+Average Failures: 0.00

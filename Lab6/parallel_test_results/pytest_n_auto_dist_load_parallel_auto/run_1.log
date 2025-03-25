@@ -1,0 +1,68 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.6, pytest-8.3.5, pluggy-1.5.0
+rootdir: C:\Users\jiyad\OneDrive\Desktop\IITGN\Software Tools and Techniques\CS202_Lab6\algorithms
+plugins: run-parallel-0.3.1, xdist-3.6.1
+created: 8/8 workers
+8 workers [412 items]
+
+........................................................................ [ 17%]
+...........................................FF...F....................... [ 34%]
+........................................................................ [ 52%]
+........................................................................ [ 69%]
+........................................................................ [ 87%]
+....................................................                     [100%]
+================================== FAILURES ===================================
+_________________________ TestBinaryHeap.test_insert __________________________
+[gw2] win32 -- Python 3.12.6 C:\Users\jiyad\OneDrive\Desktop\IITGN\Software Tools and Techniques\CS202_Lab6\venv\Scripts\python.exe
+
+self = <test_heap.TestBinaryHeap testMethod=test_insert>
+
+    def test_insert(self):
+        # Before insert 2: [0, 4, 50, 7, 55, 90, 87]
+        # After insert:  [0, 2, 50, 4, 55, 90, 87, 7]
+        self.min_heap.insert(2)
+>       self.assertEqual([0, 2, 50, 4, 55, 90, 87, 7],
+                         self.min_heap.heap)
+E       AssertionError: Lists differ: [0, 2, 50, 4, 55, 90, 87, 7] != [0, 2, 2, 4, 50, 90, 87, 7, 55]
+E       
+E       First differing element 2:
+E       50
+E       2
+E       
+E       Second list contains 1 additional elements.
+E       First extra element 8:
+E       55
+E       
+E       - [0, 2, 50, 4, 55, 90, 87, 7]
+E       + [0, 2, 2, 4, 50, 90, 87, 7, 55]
+
+tests\test_heap.py:29: AssertionError
+________________________ TestSuite.test_is_palindrome _________________________
+[gw1] win32 -- Python 3.12.6 C:\Users\jiyad\OneDrive\Desktop\IITGN\Software Tools and Techniques\CS202_Lab6\venv\Scripts\python.exe
+
+self = <test_linkedlist.TestSuite testMethod=test_is_palindrome>
+
+    def test_is_palindrome(self):
+>       self.assertTrue(is_palindrome(self.l))
+E       AssertionError: False is not true
+
+tests\test_linkedlist.py:167: AssertionError
+_______________________ TestBinaryHeap.test_remove_min ________________________
+[gw2] win32 -- Python 3.12.6 C:\Users\jiyad\OneDrive\Desktop\IITGN\Software Tools and Techniques\CS202_Lab6\venv\Scripts\python.exe
+
+self = <test_heap.TestBinaryHeap testMethod=test_remove_min>
+
+    def test_remove_min(self):
+        ret = self.min_heap.remove_min()
+        # Before remove_min : [0, 4, 50, 7, 55, 90, 87]
+        # After remove_min: [7, 50, 87, 55, 90]
+        # Test return value
+>       self.assertEqual(4, ret)
+E       AssertionError: 4 != 7
+
+tests\test_heap.py:38: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_heap.py::TestBinaryHeap::test_insert - AssertionError: List...
+FAILED tests/test_linkedlist.py::TestSuite::test_is_palindrome - AssertionErr...
+FAILED tests/test_heap.py::TestBinaryHeap::test_remove_min - AssertionError: ...
+======================= 3 failed, 409 passed in 48.04s ========================
