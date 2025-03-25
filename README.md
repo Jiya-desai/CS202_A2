@@ -1,7 +1,5 @@
-# CS202_A2: Software Tools and Techniques Assessment 2
-Code submissions for the second assessment in the course CS202: Software Tools and Techniques
-
-### There are three folder in this repo, each containing all the codes I used to perform the lab activities, and some of the generated files.
+# CS202 Software Tools and Techniques | Assessment 2
+### Code submissions for the second assessment in the course CS202: Software Tools and Techniques. There are three folder in this repo, each containing all the codes I used to perform the lab activities, and some of the generated files.
 
 # Lab 5:
 Contains the coverage report generated after executing the given suite, and the visualisations I generated after parsing the coverage data.
